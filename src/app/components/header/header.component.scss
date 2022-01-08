@@ -1,0 +1,25 @@
+@import "../../../styles/sass/abstracts/variables";
+
+header.headerContainer {
+  padding: 1.6rem 2.4rem;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.4rem;
+  color: $gray-500;
+
+  border-bottom: 1px solid $gray-100;
+  background-color: $white;
+
+  p {
+    margin-left: 1.6rem;
+    padding: 0.8rem 0.8rem 0.8rem 1.6rem;
+    border-left: 1px solid $gray-100;
+  }
+
+  span {
+    margin-left: auto;
+    text-transform: capitalize;
+  }
+}
