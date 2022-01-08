@@ -1,9 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@600&display=swap");
+
+@import "./styles/sass/abstracts/variables";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  background-color: $gray-50;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: "Lexend", sans-serif;
+  color: $gray-800;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
 }
