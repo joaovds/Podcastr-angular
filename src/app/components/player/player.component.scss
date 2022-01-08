@@ -1,0 +1,101 @@
+@import "../../../styles/sass/abstracts/variables";
+
+.playerContainer {
+  width: 32rem;
+  height: 100vh;
+  padding: 3.2rem 4rem;
+
+  background-color: $purple-500;
+  color: $white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    strong {
+      font-size: 1.6rem;
+      font-family: Lexend, sans-serif;
+      font-weight: 600;
+      user-select: none;
+    }
+  }
+
+  .emptyPlayer {
+    width: 100%;
+    height: 32rem;
+    padding: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1.5rem;
+    border: 1.5px dashed $purple-300;
+    background: linear-gradient(
+      143.8deg,
+      rgba(145, 100, 250, 0.8) 0%,
+      rgba(145, 100, 250, 0) 100%
+    );
+
+    user-select: none;
+  }
+
+  footer {
+    align-self: stretch;
+
+    &.empty {
+      opacity: 0.5;
+    }
+  }
+
+  .progress {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    font-size: 1.4rem;
+
+    user-select: none;
+
+    .slider {
+      flex: 1;
+
+      .emptySlider {
+        width: 100%;
+        height: 4px;
+        background-color: $purple-300;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    margin-top: 1.6rem;
+
+    button {
+      font-size: 0;
+      border: 0;
+
+      background-color: transparent;
+
+      &.playButton {
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 1rem;
+
+        background-color: $purple-400;
+      }
+    }
+  }
+}
