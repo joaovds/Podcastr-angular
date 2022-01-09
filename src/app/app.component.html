@@ -8,7 +8,22 @@
 
         <ul>
           <li *ngFor="let latestEpisode of latestEpisodes">
-            <p>{{ latestEpisode.title }}</p>
+            <img src="{{ latestEpisode.thumbnail }}" alt="imagem do episódio" />
+
+            <div class="episodeDetails">
+              <a href="/episodes/{{ latestEpisode.id }}">
+                {{ latestEpisode.title }}
+              </a>
+
+              <p>{{ latestEpisode.members }}</p>
+
+              <span>{{ latestEpisode.published_at }}</span>
+              <span>{{ latestEpisode.file.duration }}</span>
+            </div>
+
+            <button type="button">
+              <img src="../../assets/play-green.svg" alt="Tocar episódio" />
+            </button>
           </li>
         </ul>
       </section>

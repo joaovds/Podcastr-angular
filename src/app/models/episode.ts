@@ -1,7 +1,7 @@
 export interface Episode {
   id: string;
   title: string;
-  member: string;
+  members: string;
   published_at: string;
   thumbnail: string;
   description: string;
