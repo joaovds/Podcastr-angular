@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { PlayerComponent } from './components/player/player.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './views/home/home.component';
+
 import { registerLocaleData } from '@angular/common';
 
 import localePT from '@angular/common/locales/pt';
@@ -14,7 +16,7 @@ import localePT from '@angular/common/locales/pt';
 registerLocaleData(localePT);
 
 @NgModule({
-  declarations: [AppComponent, PlayerComponent, HeaderComponent],
+  declarations: [AppComponent, PlayerComponent, HeaderComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

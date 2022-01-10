@@ -2,71 +2,7 @@
   <main>
     <app-header></app-header>
 
-    <div class="content">
-      <section class="latestEpisodes">
-        <h2>Últimos lançamentos</h2>
-
-        <ul>
-          <li *ngFor="let latestEpisode of latestEpisodes">
-            <img src="{{ latestEpisode.thumbnail }}" alt="imagem do episódio" />
-
-            <div class="episodeDetails">
-              <a href="/episodes/{{ latestEpisode.id }}">
-                {{ latestEpisode.title }}
-              </a>
-
-              <p>{{ latestEpisode.members }}</p>
-
-              <span>{{ latestEpisode.published_at }}</span>
-              <span>{{ latestEpisode.file.duration }}</span>
-            </div>
-
-            <button type="button">
-              <img src="../../assets/play-green.svg" alt="Tocar episódio" />
-            </button>
-          </li>
-        </ul>
-      </section>
-
-      <section class="allEpisodes">
-        <h2>Todos episódios</h2>
-
-        <table cellSpacing="0">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Podcast</th>
-              <th>Integrantes</th>
-              <th>Data</th>
-              <th>Duração</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let episode of episodes">
-              <td style="width: 72px">
-                <img src="{{ episode.thumbnail }}" alt="{{ episode.title }}" />
-              </td>
-              <td>
-                <a routerLink="/episodes/{{ episode.id }}">
-                  {{ episode.title }}
-                </a>
-              </td>
-              <td>{{ episode.members }}</td>
-              <td style="width: 100px">
-                {{ episode.published_at | date: "d MMM, y" }}
-              </td>
-              <td>
-                <button type="button">
-                  <img src="assets/play-green.svg" alt="Tocar episódio" />
-                </button>
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
+    <router-outlet></router-outlet>
   </main>
 
   <app-player></app-player>
