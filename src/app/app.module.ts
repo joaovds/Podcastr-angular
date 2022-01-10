@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 
 import { PlayerComponent } from './components/player/player.component';
 import { HeaderComponent } from './components/header/header.component';
+import { registerLocaleData } from '@angular/common';
+
+import localePT from '@angular/common/locales/pt';
+
+registerLocaleData(localePT);
 
 @NgModule({
   declarations: [AppComponent, PlayerComponent, HeaderComponent],
