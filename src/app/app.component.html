@@ -31,9 +31,40 @@
       <section class="allEpisodes">
         <h2>Todos episódios</h2>
 
-        <p *ngFor="let episode of episodes">
-          {{ episode.title }}
-        </p>
+        <table cellSpacing="0">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let episode of episodes">
+              <td style="width: 72px">
+                <img src="{{ episode.thumbnail }}" alt="{{ episode.title }}" />
+              </td>
+              <td>
+                <a routerLink="/episodes/{{ episode.id }}">
+                  {{ episode.title }}
+                </a>
+              </td>
+              <td>{{ episode.members }}</td>
+              <td style="width: 100px">
+                {{ episode.published_at | date: "d MMM, y" }}
+              </td>
+              <td>
+                <button type="button">
+                  <img src="assets/play-green.svg" alt="Tocar episódio" />
+                </button>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
   </main>

@@ -36,6 +36,8 @@
         width: 6rem;
         height: 6rem;
         border-radius: 0.8rem;
+
+        object-fit: cover;
       }
 
       .episodeDetails {
@@ -106,6 +108,75 @@
         border: 1px solid $gray-100;
         border-radius: 0.8rem;
         font-size: 0;
+        background-color: $white;
+
+        transition: filter 0.2s;
+
+        img {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+
+        &:hover {
+          filter: brightness(0.95);
+        }
+      }
+    }
+  }
+}
+
+.allEpisodes {
+  padding-bottom: 2rem;
+
+  table {
+    width: 100%;
+
+    th,
+    td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid $gray-100;
+    }
+
+    th {
+      text-align: left;
+      font: 500 1rem Lexend, sans-serif;
+      text-transform: uppercase;
+      color: $gray-200;
+    }
+
+    td {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color: $gray-500;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+
+        border-radius: 0.8rem;
+        object-fit: cover;
+      }
+
+      a {
+        font-family: Lexend, sans-serif;
+        font-weight: 600;
+        line-height: 1.4rem;
+
+        text-decoration: none;
+        color: $gray-800;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      button {
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 0;
+
+        border: 1px solid $gray-100;
+        border-radius: 0.8rem;
         background-color: $white;
 
         transition: filter 0.2s;
